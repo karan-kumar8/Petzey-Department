@@ -19,31 +19,31 @@ namespace Data.Repository.Implementations
                 _context = dbContext;
             }
 
-            public Department GetById(Guid id)
+            public Departments GetById(Guid id)
             {
                 return _context.Departments.Find(id);
             }
 
-            public List<Department> GetAll()
+            public List<Departments> GetAll()
             {
                 return _context.Departments.ToList();
             }
 
-            public Department Add(Department department)
+            public Departments Add(Departments department)
             {
                 _context.Departments.Add(department);
                 _context.SaveChanges();
                 return department;
             }
 
-            public Department Update(Department department)
+            public Departments Update(Departments department)
             {
                 _context.Departments.Update(department);
                 _context.SaveChanges();
                 return department;
             }
 
-            public Department Delete(Guid id)
+            public Departments Delete(Guid id)
             {
                 var department = GetById(id);
                 if (department != null)
