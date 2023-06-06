@@ -4,11 +4,11 @@ namespace Data.Repository.Interfaces
 {
     public interface IDepartmentRepository
     {
-        Department GetById(Guid id);
-        List<Department> GetAll();
-        Department Add(Department department);
-        Department Update(Department department);
-        Department Delete(Guid id);
+        Departments GetById(Guid id);
+        List<Departments> GetAll();
+        Departments Add(Departments department);
+        Departments Update(Departments department);
+        Departments Delete(Guid id);
         void SaveChanges();
     }
 }

@@ -10,8 +10,8 @@ namespace Business.Services.Interfaces
 {
     public interface IDepartmentService
     {
-        public Department AddDepartment(DepartmentDto department);
-        public Department EditDepartment(DepartmentDto departmentDto);
+        public Departments AddDepartment(DepartmentDto department);
+        public Departments EditDepartment(DepartmentDto departmentDto);
         public List<DepartmentDto> GetAllDepartment();
         public DepartmentDto GetDepartmentById(Guid departmentId);
         public int GetTotalNumberOfDepartments();

@@ -22,11 +22,11 @@ namespace Business.Services.Implementations
             _departmentRepository = departmentRepository;
         }
 
-        public Department AddDepartment(DepartmentDto departmentDto)
+        public Departments AddDepartment(DepartmentDto departmentDto)
         {
             try
             {
-                var department = _mapper.Map<Department>(departmentDto);
+                var department = _mapper.Map<Departments>(departmentDto);
                 _departmentRepository.Add(department);
                 return department;
             }
@@ -37,11 +37,11 @@ namespace Business.Services.Implementations
             }
         }
 
-        public Department EditDepartment(DepartmentDto departmentDto)
+        public Departments EditDepartment(DepartmentDto departmentDto)
         {
             try
             {
-                var department = _mapper.Map<Department>(departmentDto);
+                var department = _mapper.Map<Departments>(departmentDto);
                 _departmentRepository.Update(department);
                 return department;
             }

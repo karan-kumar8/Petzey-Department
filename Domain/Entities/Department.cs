@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
-    public class Department
+    public class Departments
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
