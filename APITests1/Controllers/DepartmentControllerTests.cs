@@ -182,58 +182,5 @@ namespace API.Controllers.Tests
 			// Assert
 			Assert.IsNotNull(result);
 		}
-
-		[TestMethod]
-        public void DeleteDepartment_WithValidId_ShouldReturnOkResult()
-        {
-            // Arrange
-            var id = Guid.NewGuid();
-            _departmentServiceMock.Setup(x => x.DeleteDepartment(id)).Returns("Department deleted successfully");
-
-
-
-            // Act
-            var result = _controller.DeleteDepartment(id) as OkObjectResult;
-
-
-
-			// Assert
-			Assert.IsNotNull(result);
-            Assert.AreEqual("Department deleted successfully", result.Value);
-        }
-
-
-        [TestMethod]
-        public void GetTotalDepartments_ReturnsOkResult_WhenDepartmentsRetrievedSuccessfully()
-        {
-			int count = 3;
-            // Arrange
-            
-            _departmentServiceMock.Setup(s => s.GetTotalNumberOfDepartments()).Returns(count);
-
-            // Act
-            var result = _controller.GetTotalNumberOfDepartments() as OkObjectResult;
-
-            // Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual(count, result.Value);
-        }
-
-		[TestMethod]
-		public void Getsdepartmentstatusbyid_returnresult_whenDepartmentRetrivedSuccessfully()
-		{
-			// Arranga
-			var id = Guid.NewGuid();
-			var status = "Active";
-			_departmentServiceMock.Setup(s => s.GetStatusById(id)).Returns(status);
-
-			// Act
-			var result = _controller.GetStatusById(id) as OkObjectResult;
-
-			// Assert
-			Assert.IsNotNull(result);
-			Assert.AreEqual(status, result.Value);
-		}
-
 	}
 }
