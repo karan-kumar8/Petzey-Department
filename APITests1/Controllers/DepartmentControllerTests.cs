@@ -235,5 +235,5 @@ namespace API.Controllers.Tests
 			Assert.AreEqual(status, result.Value);
 		}
 
-    }
+	}
 }
