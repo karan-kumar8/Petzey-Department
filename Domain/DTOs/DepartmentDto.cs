@@ -11,7 +11,6 @@ namespace Domain.DTOs
     {
         public Guid DepartmentId { get; set; }
 
-        [Required]
         public string DepartmentName { get; set; }
 
         public string Description { get; set; }
